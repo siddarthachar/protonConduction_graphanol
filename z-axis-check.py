@@ -1,3 +1,7 @@
+## Copyright: Siddarth Achar
+## University of Pittsburgh
+
+
 import numpy as np
 import ase 
 from ase.io import read, write

@@ -1,5 +1,6 @@
 ## Copyright: Siddarth Achar
 ## University of Pittsburgh
+## ska31@pitt.edu
 
 
 import numpy as np

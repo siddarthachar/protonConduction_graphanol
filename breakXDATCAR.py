@@ -67,7 +67,7 @@ class breaking:
             os.mkdir(f'{steps_path}steps')
 
         outpath = lambda x, y :f'{self.working_dir}/{x}/steps/XDATCAR.{y}'
-        steps=np.arange(0, self.TOTsteps, self.lenFile)
+        steps=np.arange(0, self.TOTsteps + self.lenFile, self.lenFile)
         start_collect = False
         count_atoms = 0
         counter_direct = 0

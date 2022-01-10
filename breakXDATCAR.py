@@ -11,7 +11,7 @@ from ase.io import read, write
 from ase import neighborlist
 import os
 
-class hoppingrate:
+class breaking:
 
     def __init__(self, working_dir, timestep, lenFile, TOTsteps, noAtoms):
         '''
@@ -58,7 +58,7 @@ class hoppingrate:
         '''
         inpath = lambda x:f'{self.working_dir}/{x}/XDATCAR'   # input of each of the XDATCAR files.
         
-        prependThis = hoppingrate.xdatcar_header_string(self, dir_in)
+        prependThis = breaking.xdatcar_header_string(self, dir_in)
 
         steps_path = f'{self.working_dir}/{dir_in}/'
         list_dir = os.listdir(steps_path)
@@ -92,7 +92,7 @@ class hoppingrate:
                     
                     if count_step > 0: # for the next step, we would have to preprend the header adn close the file
                         file_out.close()
-                        hoppingrate.line_prepender(outpath(dir_in,steps[count_step-1]),prependThis)  # count_step was updated initially
+                        breaking.line_prepender(outpath(dir_in,steps[count_step-1]),prependThis)  # count_step was updated initially
                         
                     
                     file_out = open(outpath(dir_in,steps[count_step]),'w+')  # creates an xdatcar file to start writing
@@ -104,6 +104,6 @@ class hoppingrate:
                 start_collect = True
 
 if __name__ == "__main__":
-    calcHop = hoppingrate(working_dir='.',timestep=0.00025, lenFile=200, TOTsteps=80000, noAtoms=61)
-    calcHop.breakxdatcar(10) # An example is file directory 10.
+    breakIT = breaking(working_dir='.',timestep=0.00025, lenFile=200, TOTsteps=80000, noAtoms=61)
+    breakIT.breakxdatcar(10) # An example is file directory 10.
    

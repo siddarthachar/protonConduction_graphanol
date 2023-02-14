@@ -3,10 +3,10 @@ Documentation and discussion regarding the study of proton conduction in graphan
 
 ## Primary Files
 
-1. **cec.py**:
-2. **lmc.py**:
-3. **goh.pb**:
-4. **goh.poscar**:
+1. **cec.py**: Script to compute the center of excess charge (CEC) to locate a proton in graphanol.
+2. **lmc.py**: Script to perform lattice Monte Carlo (LMC) proton transfer simulation for graphanol. The code uses graph models constructed with Networkx. 
+3. **goh.pb**: DeePMD potential (DP) for graphanol.
+4. **goh.poscar**: Sample POSCAR file of 24C graphanol.
 
 ## Miscellaneous Files
 
